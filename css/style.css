@@ -20,8 +20,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background);
   color: #fff;
-  min-height: 2000px;
-  overflow-x: hidden;
 }
 
 img {
@@ -76,7 +74,10 @@ img {
 }
 
 .navbar .navbar-nav a:hover::after {
-  transform: scaleX(0.5);
+  transform: scaleX(0.2);
+}
+.navbar .navbar-nav a::after {
+  transform-origin: 0 0;
 }
 
 .navbar .navbar-extra a {
@@ -155,6 +156,7 @@ img {
 .contact,
 .menu {
   padding: 8rem 7% 1.4rem;
+  min-height: 100vh;
 }
 
 .about h2,
@@ -174,7 +176,6 @@ img {
 .about .row {
   display: flex;
   gap: 2rem;
-  align-items: center;
 }
 
 .about .row .about-img {
@@ -320,8 +321,20 @@ footer .links {
 footer .links a {
   color: #fff;
   padding: 0.7rem 1rem;
+  margin: 0 0.3rem;
+  border-radius: 0.5rem;
+  transition: 0.3s;
 }
 
+footer .links a:hover {
+  background-color: #221c77;
+  color: var(--primary);
+}
+
+footer .links a:active {
+  background-color: #000;
+  color: #fff;
+}
 footer .credit {
   font-size: 0.9rem;
 }
@@ -364,10 +377,6 @@ footer .credit {
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 2rem;
-  }
-
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
   }
 
   .about .row {

@@ -366,6 +366,10 @@ footer .credit {
     font-size: 2rem;
   }
 
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
   .about .row {
     flex-wrap: wrap;
   }

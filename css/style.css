@@ -137,6 +137,7 @@ img {
   margin-top: 1rem;
   line-height: 1.4;
   font-weight: 100;
+  mix-blend-mode: difference;
 }
 
 .hero .content .cta {
@@ -324,7 +325,7 @@ footer .links a {
 footer .credit {
   font-size: 0.9rem;
 }
-
+/* media query */
 /* Laptop */
 @media (max-width: 1366px) {
   html {
@@ -336,6 +337,7 @@ footer .credit {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
+    background-position: 70% center;
   }
 
   #hamburger-menu {

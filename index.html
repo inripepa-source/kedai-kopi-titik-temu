@@ -15,7 +15,7 @@
     />
 
     <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -101,24 +101,28 @@
           <img src="img/Menu/1.jpg" alt="Affogato" class="menu-card-img" />
           <h3 class="menu-card-title">Affogato</h3>
           <p class="menu-card-price">IDR 17K</p>
+          <button class="btn-add-cart">Masukkan ke Keranjang</button>
         </div>
 
         <div class="menu-card">
           <img src="img/Menu/2.jpg" alt="Black Coffee" class="menu-card-img" />
           <h3 class="menu-card-title">Black Coffee</h3>
           <p class="menu-card-price">IDR 13K</p>
+          <button class="btn-add-cart">Masukkan ke Keranjang</button>
         </div>
 
         <div class="menu-card">
           <img src="img/Menu/3.jpg" alt="Latte" class="menu-card-img" />
           <h3 class="menu-card-title">Latte</h3>
           <p class="menu-card-price">IDR 15K</p>
+          <button class="btn-add-cart">Masukkan ke Keranjang</button>
         </div>
 
         <div class="menu-card">
           <img src="img/Menu/4.jpg" alt="Americano" class="menu-card-img" />
           <h3 class="menu-card-title">Americano</h3>
           <p class="menu-card-price">IDR 20K</p>
+          <button class="btn-add-cart">Masukkan ke Keranjang</button>
         </div>
       </div>
     </section>
@@ -140,20 +144,30 @@
         >
         </iframe>
 
-        <form action="">
+        <form action="" id="contact-form">
           <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="Nama" />
+            <input type="text" id="contact-name" placeholder="Nama" required />
           </div>
 
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="email" placeholder="Email" />
+            <input
+              type="email"
+              id="contact-email"
+              placeholder="Email"
+              required
+            />
           </div>
 
           <div class="input-group">
             <i data-feather="phone"></i>
-            <input type="text" placeholder="Nomor HP" />
+            <input
+              type="text"
+              id="contact-phone"
+              placeholder="Nomor HP"
+              required
+            />
           </div>
 
           <button type="submit" class="btn">Kirim Pesan</button>
@@ -165,15 +179,28 @@
     <!-- Footer Start -->
     <footer>
       <div class="social">
-        <a href="#">
+        <a href="https://www.instagram.com/Itsmepepaaaa" target="_blank">
           <i data-feather="instagram"></i>
         </a>
 
-        <a href="#">
-          <i data-feather="twitter"></i>
+        <a href="https://www.tiktok.com/@inripepa" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-tiktok"
+          >
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+          </svg>
         </a>
 
-        <a href="#">
+        <a href="https://www.facebook.com/topan.pepa" target="_blank">
           <i data-feather="facebook"></i>
         </a>
       </div>
@@ -196,7 +223,39 @@
       feather.replace();
     </script>
 
-    <!-- Javascript -->
+    <div id="search-modal" class="search-modal">
+      <div class="search-content">
+        <span class="close-search" id="close-search">&times;</span>
+        <h3>Cari Menu Favoritmu</h3>
+        <form action="#" method="GET" class="search-form">
+          <input
+            type="text"
+            placeholder="Ketik nama kopi... (misal: Latte, Affogato)"
+            id="search-input"
+            required
+          />
+          <button type="submit" class="btn-search">Cari</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Keranjang Belanja</h2>
+        <span class="close-cart" id="close-cart">&times;</span>
+      </div>
+
+      <div class="cart-items" id="cart-items">
+        <p class="empty-cart-msg">Keranjangmu masih kosong.</p>
+      </div>
+
+      <div class="cart-footer">
+        <h3>Total: <span id="cart-total">IDR 0</span></h3>
+        <button class="btn-checkout">Bayar Sekarang</button>
+      </div>
+    </div>
+
+    <!-- Java Script -->
     <script src="js/script.js"></script>
   </body>
 </html>
